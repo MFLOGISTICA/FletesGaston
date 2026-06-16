@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import { MapPin, Phone, Camera, ArrowUp, Share2 } from 'lucide-react'
 

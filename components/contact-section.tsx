@@ -1,3 +1,5 @@
+'use client'
+
 import { MapPin, Phone, Clock, MessageCircle, Share2, Camera } from 'lucide-react'
 
 const hours = [
