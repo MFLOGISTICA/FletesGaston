@@ -56,8 +56,8 @@ export default function MovingKit() {
           <div className="grid grid-cols-2 gap-3">
             <div className="relative h-64 rounded-xl overflow-hidden">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kitmudanza3-AQsTN4h7RdA5ZX0RezYDHpfxjLkI4h.jpg"
-                alt="Equipo Gastón transportando sillas envueltas en plástico"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/imagen3-Fpr8KMtp6sY8YteiruhShgoThPPIBB.jpg"
+                alt="Roperos móviles de madera con ropa colgada listos para mudanza"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 50vw, 25vw"
@@ -65,8 +65,8 @@ export default function MovingKit() {
             </div>
             <div className="relative h-64 rounded-xl overflow-hidden mt-6">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kitmudanza4-Vp0weRSa9h1xDJCpTGLw3jO3MFdIUd.jpg"
-                alt="Caja de mudanza Gastón con logo y datos de contacto"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/imagen4-Q0s0Me10fxhrGaS7whK8HrjnmCma8n.jpg"
+                alt="Sofá completamente embalado con film negro y cinchas naranjas"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 50vw, 25vw"
