@@ -21,8 +21,8 @@ export default function WhyUs() {
               <div className="space-y-3">
                 <div className="relative h-56 rounded-xl overflow-hidden">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/8-26qaTyfl1kuvWE8OvE0dNlkncDT1Ge.jpg"
-                    alt="Equipo de Gastón empacando sofás con cuidado"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20a%C3%B1os1-x4xoHGIzpjaKqOjjxf60VmqzsMG9Nr.jpg"
+                    alt="Camioneta Gastón Fletes y Mudanzas cargada con materiales"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 50vw, 25vw"
@@ -30,8 +30,8 @@ export default function WhyUs() {
                 </div>
                 <div className="relative h-40 rounded-xl overflow-hidden">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-iSwXWF4OnZxZ1YhnDYfEnqw7t6b0yQ.jpg"
-                    alt="Trabajadores asegurando mueble con cintas"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20a%C3%B1os2-4sdqu2HJP8Sn9vByEYzFHB8VrY6Wq0.jpg"
+                    alt="Camión Gastón Fletes y Mudanzas frente a un local de madera"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 50vw, 25vw"
@@ -41,8 +41,8 @@ export default function WhyUs() {
               <div className="space-y-3 mt-8">
                 <div className="relative h-40 rounded-xl overflow-hidden">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/12-zvzmTMa3TM5xyfoVcfUJRz0CwQu8C9.jpg"
-                    alt="Mudanza en altura, subiendo mueble a segundo piso"
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20a%C3%B1os3-GYVjAEkzHfZawG4GeObCLhz3IxB5YL.jpg"
+                    alt="Camión de mudanza Gastón frente a mansión residencial"
                     fill
                     className="object-cover"
                     sizes="(max-width: 768px) 50vw, 25vw"

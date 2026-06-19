@@ -23,7 +23,7 @@ const slides = [
   },
   {
     id: 3,
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/5-iSwXWF4OnZxZ1YhnDYfEnqw7t6b0yQ.jpg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/serviciodeembalaje-1D7S6PaVEezZqlBkktRCKBbqSyFHjb.jpg',
     title: 'Servicio de embalaje profesional',
     text: 'Protegemos cada objeto utilizando materiales adecuados y técnicas de embalaje que minimizan riesgos durante el traslado.',
     cta1: { label: 'Solicitar asesoramiento', href: 'https://wa.me/5491163822653?text=Hola!%20Quiero%20asesoramiento%20sobre%20embalaje' },
