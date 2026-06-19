@@ -72,12 +72,12 @@ export default function MovingKit() {
                 sizes="(max-width: 768px) 50vw, 25vw"
               />
             </div>
-            <div className="relative h-56 rounded-xl overflow-hidden col-span-2">
+            <div className="relative h-72 rounded-xl overflow-hidden col-span-2">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/kitmudanza4-pt4InJmbmzmERdzpHgZA44zKfJ7ry1.jpg"
                 alt="Caja de mudanza Gastón con logo, teléfono y sitio web"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
