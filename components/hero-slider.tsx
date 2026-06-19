@@ -15,7 +15,7 @@ const slides = [
   },
   {
     id: 2,
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/7-HQ5Fk9FMLsiaPJxA6eRTOCcC2fgUck.jpg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mudanzasatodoelpais-VnypKrD2i7DPd4PLW1WCKxz8LcCJEc.png',
     title: 'Mudanzas a todo el país',
     text: 'Trasladamos tus pertenencias con organización, puntualidad y máxima seguridad hasta donde lo necesites.',
     cta1: { label: 'Cotizar mudanza', href: 'https://wa.me/5491163822653?text=Hola!%20Quiero%20cotizar%20una%20mudanza' },
@@ -31,7 +31,7 @@ const slides = [
   },
   {
     id: 4,
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/11-wpbCJ8DELTBg5NWm1dI9Cyynqrl6L6.jpg',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/guardamuebles-krwrFv2RZYYsYvBMkjG1dOecA0jy0r.jpg',
     title: 'Guardamuebles seguros para tus pertenencias',
     text: 'Espacios pensados para almacenar tus muebles y objetos de manera organizada y protegida, por el tiempo que necesites.',
     cta1: { label: 'Cotizar Guardamuebles', href: 'https://wa.me/5491163822653?text=Hola!%20Quiero%20cotizar%20guardamuebles' },

@@ -1,9 +1,8 @@
 import Image from 'next/image'
-import { Box, ShoppingBasket, Archive, Shirt, Shield } from 'lucide-react'
+import { Box, Archive, Shirt, Shield } from 'lucide-react'
 
 const kitItems = [
   { icon: Box, label: 'Cajas identificadas' },
-  { icon: ShoppingBasket, label: 'Canastos' },
   { icon: Archive, label: 'Baúles' },
   { icon: Shirt, label: 'Percheros móviles' },
   { icon: Shield, label: 'Elementos de protección' },
