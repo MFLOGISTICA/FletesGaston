@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 export const metadata: Metadata = {
   title: 'Fletes y Mudanzas Gastón | Pilar, Buenos Aires',
   description:
-    'Más de 20 años realizando mudanzas particulares y empresariales. Guardamuebles, embalaje profesional y fletes a todo el país. Pilar, Buenos Aires.',
+    'Más de 25 años realizando mudanzas particulares y empresariales. Guardamuebles, embalaje profesional y fletes a todo el país. Pilar, Buenos Aires.',
   keywords: 'mudanzas pilar, fletes pilar, mudanzas buenos aires, guardamuebles pilar, embalaje profesional',
   generator: 'v0.app',
 }

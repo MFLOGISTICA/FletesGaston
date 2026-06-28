@@ -61,7 +61,7 @@ export default function WhyUs() {
             </div>
             {/* Experience badge */}
             <div className="absolute -bottom-4 -right-4 bg-[#dc1f1f] text-white rounded-xl p-4 shadow-xl">
-              <div className="text-3xl font-black leading-none">20+</div>
+              <div className="text-3xl font-black leading-none">25+</div>
               <div className="text-xs font-semibold uppercase tracking-wide mt-1">Años de<br />Trayectoria</div>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function WhyUs() {
               id="whyus-title"
               className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-5 text-balance"
             >
-              Más de 20 años ayudando a familias y empresas
+              Más de 25 años ayudando a familias y empresas
             </h2>
             <p className="text-[#6b7280] leading-relaxed mb-4">
               Somos una empresa familiar con una amplia trayectoria brindando servicios de mudanzas, traslados, logística y guardamuebles en Pilar y toda la región.

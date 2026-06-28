@@ -25,7 +25,7 @@ export default function FinalCta() {
           Tu próxima mudanza puede ser mucho más simple
         </h2>
         <p className="text-white/80 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
-          Solicitá tu presupuesto personalizado y dejá tu mudanza en manos de profesionales con más de 20 años de experiencia.
+          Solicitá tu presupuesto personalizado y dejá tu mudanza en manos de profesionales con más de 25 años de experiencia.
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">

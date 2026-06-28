@@ -9,7 +9,7 @@ const slides = [
     id: 1,
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-VO6TAYjMQv9fcLXqdGcS4RIg4aA9jl.jpg',
     title: 'Mudanzas seguras para hogares y empresas',
-    text: 'Realizamos mudanzas particulares y empresariales con personal capacitado, vehículos habilitados y más de 20 años de experiencia.',
+    text: 'Realizamos mudanzas particulares y empresariales con personal capacitado, vehículos habilitados y más de 25 años de experiencia.',
     cta1: { label: 'Solicitar presupuesto', href: 'https://wa.me/5491163822653?text=Hola!%20Quiero%20solicitar%20un%20presupuesto' },
     cta2: { label: 'Llamar ahora', href: 'tel:01163822653' },
   },
@@ -17,7 +17,7 @@ const slides = [
     id: 2,
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/mudanzasatodoelpais-VnypKrD2i7DPd4PLW1WCKxz8LcCJEc.png',
     title: 'Mudanzas a todo el país',
-    text: 'Trasladamos tus pertenencias con organización, puntualidad y máxima seguridad hasta donde lo necesites.',
+    text: 'Sabemos lo que significa una mudanza, te acompañamos en todo el proceso previo y post mudanza para brindarte nuestra experiencia y tu tranquilidad.',
     cta1: { label: 'Cotizar mudanza', href: 'https://wa.me/5491163822653?text=Hola!%20Quiero%20cotizar%20una%20mudanza' },
     cta2: { label: 'Consultar disponibilidad', href: 'tel:01163822653' },
   },
@@ -25,7 +25,7 @@ const slides = [
     id: 3,
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/serviciodeembalaje-1D7S6PaVEezZqlBkktRCKBbqSyFHjb.jpg',
     title: 'Servicio de embalaje profesional',
-    text: 'Protegemos cada objeto utilizando materiales adecuados y técnicas de embalaje que minimizan riesgos durante el traslado.',
+    text: 'Protegemos cada objeto con el material indicado para su correcto empaque y translado.',
     cta1: { label: 'Solicitar asesoramiento', href: 'https://wa.me/5491163822653?text=Hola!%20Quiero%20asesoramiento%20sobre%20embalaje' },
     cta2: { label: 'Ver servicios', href: '#servicios' },
   },
@@ -96,7 +96,7 @@ export default function HeroSlider() {
           <div className="max-w-3xl">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-[#dc1f1f] text-white text-xs font-bold px-3 py-1.5 rounded mb-6 uppercase tracking-wider">
-              <span>20+ Años de Experiencia</span>
+              <span>25+ Años de Experiencia</span>
             </div>
 
             {/* Title */}
@@ -140,7 +140,7 @@ export default function HeroSlider() {
       </div>
 
       {/* Navigation arrows */}
-      <button
+      {/* <button
         onClick={prev}
         className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-[#dc1f1f] text-white p-3 rounded-full transition-all backdrop-blur-sm border border-white/20"
         aria-label="Slide anterior"
@@ -153,7 +153,7 @@ export default function HeroSlider() {
         aria-label="Slide siguiente"
       >
         <ChevronRight size={24} />
-      </button>
+      </button> */}
 
       {/* Dots */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2" role="tablist" aria-label="Slides">

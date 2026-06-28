@@ -36,7 +36,7 @@ export default function Footer() {
               className="h-12 w-auto object-contain rounded mb-4"
             />
             <p className="text-white/60 text-sm leading-relaxed mb-5">
-              Más de 20 años trasladando hogares, empresas y proyectos con responsabilidad y confianza.
+              Más de 25 años trasladando hogares, empresas y proyectos con responsabilidad y confianza.
             </p>
             <div className="flex gap-3">
               <a

@@ -1,7 +1,7 @@
 import { Award, Truck, Warehouse, Package, MapPin } from 'lucide-react'
 
 const items = [
-  { icon: Award, text: 'Más de 20 años de experiencia' },
+  { icon: Award, text: 'Más de 25 años de experiencia' },
   { icon: Truck, text: 'Mudanzas particulares y empresariales' },
   { icon: Warehouse, text: 'Guardamuebles' },
   { icon: Package, text: 'Embalaje profesional' },
