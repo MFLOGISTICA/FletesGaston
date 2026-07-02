@@ -29,7 +29,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-1">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/loguitoas-A0Xl5RXXU0eiUltzT5JvO0BbT8b25F.jpg"
+              src="gasti.png"
               alt="Fletes y Mudanzas Gastón"
               width={160}
               height={50}

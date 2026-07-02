@@ -8,7 +8,7 @@ const slides = [
   {
     id: 1,
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3-VO6TAYjMQv9fcLXqdGcS4RIg4aA9jl.jpg',
-    title: 'Mudanzas seguras para hogares y empresas',
+    title: 'Mudanzas profesionales, seguras y sin complicaciones',
     text: 'Realizamos mudanzas particulares y empresariales con personal capacitado, vehículos habilitados y más de 25 años de experiencia.',
     cta1: { label: 'Solicitar presupuesto', href: 'https://wa.me/5491163822653?text=Hola!%20Quiero%20solicitar%20un%20presupuesto' },
     cta2: { label: 'Llamar ahora', href: 'tel:01163822653' },
@@ -42,6 +42,11 @@ const slides = [
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0)
   const [isAnimating, setIsAnimating] = useState(false)
+  
+  // --- NUEVOS ESTADOS PARA EL SWIPE ---
+  const [dragStartX, setDragStartX] = useState<number | null>(null)
+  const [dragEndX, setDragEndX] = useState<number | null>(null)
+  const [isDragging, setIsDragging] = useState(false)
 
   const goTo = useCallback((index: number) => {
     if (isAnimating) return
@@ -66,13 +71,65 @@ export default function HeroSlider() {
     }
   }
 
+  // --- LÓGICA DE SWIPE / DRAG ---
+  const minSwipeDistance = 50 // Mínimo de píxeles que debe moverse para considerar que es un swipe
+
+  const handleDragStart = (clientX: number) => {
+    setDragStartX(clientX)
+    setDragEndX(null)
+    setIsDragging(true)
+  }
+
+  const handleDragMove = (clientX: number) => {
+    if (isDragging) {
+      setDragEndX(clientX)
+    }
+  }
+
+  const handleDragEnd = () => {
+    setIsDragging(false)
+    if (dragStartX === null || dragEndX === null) return
+
+    const distance = dragStartX - dragEndX
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+
+    if (isLeftSwipe) {
+      next() // Deslizó hacia la izquierda, va al siguiente
+    }
+    if (isRightSwipe) {
+      prev() // Deslizó hacia la derecha, va al anterior
+    }
+
+    // Reiniciar estados
+    setDragStartX(null)
+    setDragEndX(null)
+  }
+
   return (
-    <section id="inicio" className="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden" aria-label="Presentación principal">
+    <section 
+      id="inicio" 
+      // Agregamos cursor-grab para PC
+      className="relative h-screen min-h-[600px] max-h-[900px] overflow-hidden cursor-grab active:cursor-grabbing" 
+      aria-label="Presentación principal"
+      
+      // Eventos para Mobile (Touch)
+      onTouchStart={(e) => handleDragStart(e.targetTouches[0].clientX)}
+      onTouchMove={(e) => handleDragMove(e.targetTouches[0].clientX)}
+      onTouchEnd={handleDragEnd}
+      
+      // Eventos para Desktop (Mouse)
+      onMouseDown={(e) => handleDragStart(e.clientX)}
+      onMouseMove={(e) => handleDragMove(e.clientX)}
+      onMouseUp={handleDragEnd}
+      onMouseLeave={handleDragEnd} // Por si el mouse sale del contenedor mientras arrastra
+    >
       {/* Slides */}
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-700 ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
+          // Agregamos pointer-events-none para que la imagen no interfiera con el arrastre del mouse
+          className={`absolute inset-0 transition-opacity duration-700 pointer-events-none ${index === current ? 'opacity-100 z-10' : 'opacity-0 z-0'}`}
           aria-hidden={index !== current}
         >
           <Image
@@ -82,6 +139,7 @@ export default function HeroSlider() {
             className="object-cover object-center"
             priority={index === 0}
             sizes="100vw"
+            draggable={false} // Previene el comportamiento nativo de arrastrar imágenes en navegadores
           />
           {/* Dark overlay */}
           <div className="absolute inset-0 bg-black/60" />
@@ -91,7 +149,7 @@ export default function HeroSlider() {
       ))}
 
       {/* Content */}
-      <div className="relative z-20 h-full flex items-center">
+      <div className="relative z-20 h-full flex items-center sm:mx-20">
         <div className="max-w-7xl mx-auto px-4 w-full pt-20">
           <div className="max-w-3xl">
             {/* Badge */}
@@ -117,7 +175,11 @@ export default function HeroSlider() {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4">
+            {/* onPointerDown={(e) => e.stopPropagation()} previene que al hacer clic en el botón se dispare el arrastre */}
+            <div 
+              className="flex flex-wrap gap-4"
+              onPointerDown={(e) => e.stopPropagation()} 
+            >
               <a
                 href={slides[current].cta1.href}
                 target="_blank"
@@ -140,23 +202,28 @@ export default function HeroSlider() {
       </div>
 
       {/* Navigation arrows */}
-      {/* <button
-        onClick={prev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-[#dc1f1f] text-white p-3 rounded-full transition-all backdrop-blur-sm border border-white/20"
+      <button
+        onClick={(e) => { e.stopPropagation(); prev(); }}
+        className="hidden sm:flex absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-[#dc1f1f] text-white p-3 rounded-full transition-all backdrop-blur-sm border border-white/20"
         aria-label="Slide anterior"
       >
         <ChevronLeft size={24} />
       </button>
       <button
-        onClick={next}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-[#dc1f1f] text-white p-3 rounded-full transition-all backdrop-blur-sm border border-white/20"
+        onClick={(e) => { e.stopPropagation(); next(); }}
+        className="hidden sm:flex absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-white/10 hover:bg-[#dc1f1f] text-white p-3 rounded-full transition-all backdrop-blur-sm border border-white/20"
         aria-label="Slide siguiente"
       >
         <ChevronRight size={24} />
-      </button> */}
+      </button>
 
       {/* Dots */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2" role="tablist" aria-label="Slides">
+      <div 
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex gap-2" 
+        role="tablist" 
+        aria-label="Slides"
+        onPointerDown={(e) => e.stopPropagation()}
+      >
         {slides.map((_, index) => (
           <button
             key={index}
